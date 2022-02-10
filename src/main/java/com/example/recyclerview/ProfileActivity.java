@@ -2,14 +2,13 @@ package com.example.recyclerview;
 
 import android.os.Bundle;
 import android.widget.TextView;
-import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity {
-    private ArrayList<User> userList;
+    private ArrayList<Device> userList;
     private recyclerAdapter.RecyclerViewClickListener listener;
 
 
@@ -18,6 +17,8 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_activity);
         TextView nameTxt = findViewById(R.id.nameTextView);
+
+        getSupportActionBar().hide();
 
         String username = "Username not set";
 
